@@ -9,7 +9,7 @@
 <body>
     <div class="blog-container">
         <?php
-            $conn=mysqli_connect('localhost','root','password786','chumt');
+            $conn=mysqli_connect('localhost','root','password','%dbname%');
             if(!mysqli_connect_errno()){
                 $sql = "SELECT * FROM blogs";
                 $result = mysqli_query($conn,$sql);
@@ -20,7 +20,7 @@
         <div class="blog">
             <div class="blog__title"><?php echo $blog["title"]; ?></div>
             <div class="inner-container">
-                <img src="<?php echo $blog["img"]; ?>" alt="chumt kumar" class="blog__img">
+                <img src="<?php echo $blog["img"]; ?>" alt="blog_img" class="blog__img">
                 <div class="blog__text"><?php echo $blog["content"]; ?></div>
             </div>
         </div>
