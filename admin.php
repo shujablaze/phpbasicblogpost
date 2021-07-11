@@ -16,7 +16,7 @@
             if(explode('/',$file["type"])[0]==="image"){
                 move_uploaded_file($fileTempLoc,$filePath);
 
-                $conn=mysqli_connect('localhost','root','password786','chumt');
+                $conn=mysqli_connect('localhost','root','password','%dbname%');
                 if(!mysqli_connect_errno()){
 
                     $sql = "INSERT INTO blogs (title,content,img) VALUES ('$blogTitle','$blogContent','$filePath')";
